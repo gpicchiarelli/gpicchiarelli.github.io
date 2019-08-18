@@ -2,3 +2,4 @@ a {color:green;}         /* Unvisited link  */
 a:visited {color:green;} /* Visited link    */
 a:hover {color:green;}   /* Mouse over link */
 a:active {color:green;}  /* Selected link   */
+.boxhead a {text-decoration: none;}
