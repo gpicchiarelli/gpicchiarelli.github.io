@@ -1,5 +1,5 @@
-a {color:green;}         /* Unvisited link  */
-a:visited {color:green;} /* Visited link    */
-a:hover {color:green;}   /* Mouse over link */
-a:active {color:green;}  /* Selected link   */
+a {color:#1ec503;}         /* Unvisited link  */
+a:visited {color:#1ec503;} /* Visited link    */
+a:hover {color:#1ec503;}   /* Mouse over link */
+a:active {color:#1ec503;}  /* Selected link   */
 .boxhead a {text-decoration: none;}
