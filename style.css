@@ -17,7 +17,7 @@ p code { vertical-align: middle; padding: .125em .25em .05em .25em; font-size: .
 .footnotes p { margin-top: 0; }
 .footnotes { font-size: .75rem; }
 
-a { background-color: transparent; }
+a { background-color: transparent; text-decoration:none; }
 a, blockquote, body, code, div, form, h1, h2, h3, html, input, li, ol, p, pre, table, td, textarea, th, tr, ul { box-sizing: border-box; }
 button, input[type="submit"], input[type="text"], input[type="email"] { -webkit-appearance: none; -moz-appearance: none; overflow: visible; }
 button, input, optgroup, select, textarea { font-family: inherit; font-size: 1rem; line-height: 1.5; margin: 0; }
