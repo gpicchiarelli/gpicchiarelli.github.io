@@ -1,0 +1,22 @@
+body {font-family: 'DECTerminalModern', monospace; color: #c5c8c6; background-color: #1d1f21;}
+a {color: #81a2be;text-decoration: none;}
+a:visited {color: #b294bb;text-decoration: none;}
+a:hover {color: #f0c674;}
+a.ref:hover {color: #b5bd68;}
+a.cite:hover {color: #cc6666;}
+a.talk:hover {color: #8abeb7;}
+header {margin-bottom: 1.0em;}
+footer {margin-top: 1.0em;}
+header, footer {display: grid; grid-template-columns: 33% 33% 33%}
+h2 {text-transform: small-caps; font-size:1.0em; padding: 0;margin:0}
+section {padding-left: 3.0em; margin-bottom: 1.0em;}
+section h2 {margin-left: -3.0em;}
+section p:first-of-type {margin-top: 0}
+.content {width: 540px; margin: 0; text-align: left}
+.center {text-align: center;}      
+.right {text-align: right;}
+@keyframes blinker {
+from, 49.9% { opacity: 0; }
+50%, to { opacity: 1; }
+}
+.cursor {opacity: 0; animation: blinker 1s linear infinite;}
