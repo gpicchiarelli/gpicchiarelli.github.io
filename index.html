@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$man gpicchiarelli - Software Engineer</title>
     <link rel="shortcut icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background-color: #000;
@@ -13,61 +12,74 @@
             font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
         .terminal {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            height: 100vh;
+            background-color: #000;
+            border: 2px solid #0f0;
+            border-radius: 10px;
             padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+        }
+
+        .hacker-title {
+            color: #0f0;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            color: #0f0;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            list-style: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .links li {
+            margin: 0.5rem 0;
+        }
+
+        .links a {
+            color: #0f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #0f0;
+            text-decoration: underline;
+        }
+
+        .stack-exchange-badge {
+            display: block;
+            margin: 2rem auto;
+            text-align: center;
         }
 
         .prompt {
-            color: #0ff;
-            margin-right: 0.5rem;
-        }
-
-        .output {
             color: #0f0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: #00f;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0ff;
+            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
     <div class="terminal">
-        <pre>
-   ____             _           ____                     _           
-  / ___|  ___   ___| | _____   |  _ \  __ _ _ __ ___   __ _| | ___  ___ 
-  \___ \ / _ \ / __| |/ / _ \  | | | |/ _` | '_ ` _ \ / _` | |/ _ \/ __|
-   ___) | (_) | (__|   <  __/  | |_| | (_| | | | | | | (_| | |  __/\__ \
-  |____/ \___/ \___|_|\_\___|  |____/ \__,_|_| |_| |_|\__,_|_|\___||___/
-                                                                        
-        </pre>
-        <p class="prompt">~/gpicchiarelli$</p>
-        <p class="output">man gpicchiarelli</p>
-        <p class="output">Software Engineer, Tech Enthusiast</p>
-        <p class="prompt">~/gpicchiarelli$</p>
-        <ul>
+        <h1 class="hacker-title">~/gpicchiarelli - Software Engineer</h1>
+        <p class="quote">-- I don't like the idea that I'm not in control of my life.</p>
+        <ul class="links">
             <li><a href="https://github.com/gpicchiarelli">GitHub</a></li>
             <li><a href="https://gitlab.com/gpicchiarelli">GitLab</a></li>
             <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share">Amazon Wishlist</a></li>
@@ -75,12 +87,10 @@
             <li><a href="https://www.instagram.com/gpicchiarelli">Instagram</a></li>
             <li><a href="https://www.youtube.com/user/swordlothar">YouTube</a></li>
             <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli">Jamendo</a></li>
-            <li><a href="mailto:gpicchiarelli@gmail.com">Mail</a></li>
+            <li><a href="mailto:gpicchiarelli@gmail.com">Email</a></li>
         </ul>
-        <a href="https://stackexchange.com/users/1408780">
-            <img src="https://stackexchange.com/users/flair/1408780.png" width="208" height="58"
-                alt="profile for gpicchiarelli on Stack Exchange, a network of free, community-driven Q&A sites"
-                title="profile for gpicchiarelli on Stack Exchange, a network of free, community-driven Q&A sites">
+        <a class="stack-exchange-badge" href="https://stackexchange.com/users/1408780">
+            <img src="https://stackexchange.com/users/flair/1408780.png" width="208" height="58" alt="Profile for gpicchiarelli on Stack Exchange" title="Profile for gpicchiarelli on Stack Exchange">
         </a>
         <p class="prompt">~/gpicchiarelli$</p>
     </div>
