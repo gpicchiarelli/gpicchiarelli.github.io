@@ -3,82 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$man gpicchiarelli - Software Engineer</title>
+    <title>gpicchiarelli - Software Engineer</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
         body {
-            background-color: #000;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            background-color: #f7f7f7;
         }
 
-        .terminal {
-            background-color: #000;
-            border: 2px solid #0f0;
-            border-radius: 10px;
-            padding: 2rem;
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
             max-width: 600px;
             width: 90%;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
         }
 
-        .hacker-title {
-            color: #0f0;
-            font-size: 1.5rem;
-            text-align: center;
-            margin: 1rem 0;
+        .header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .quote {
             font-style: italic;
-            text-align: center;
-            color: #0f0;
-            margin-bottom: 2rem;
+            color: #777;
+            margin-bottom: 30px;
         }
 
         .links {
             list-style: none;
             padding-left: 0;
             text-align: center;
+            margin: 0;
         }
 
         .links li {
-            margin: 0.5rem 0;
+            margin: 10px 0;
         }
 
         .links a {
-            color: #0f0;
+            color: #007bff;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .links a:hover {
-            color: #0f0;
+            color: #0056b3;
             text-decoration: underline;
         }
 
         .stack-exchange-badge {
             display: block;
-            margin: 2rem auto;
+            margin: 30px auto;
             text-align: center;
         }
 
         .prompt {
-            color: #0f0;
-            margin-top: 1rem;
+            color: #333;
+            font-weight: bold;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="terminal">
-        <h1 class="hacker-title">~/gpicchiarelli - Software Engineer</h1>
-        <p class="quote">-- I don't like the idea that I'm not in control of my life.</p>
+    <div class="container">
+        <h1 class="header">gpicchiarelli - Software Engineer</h1>
+        <p class="quote">"I don't like the idea that I'm not in control of my life."</p>
         <ul class="links">
             <li><a href="https://github.com/gpicchiarelli">GitHub</a></li>
             <li><a href="https://gitlab.com/gpicchiarelli">GitLab</a></li>
@@ -92,7 +91,7 @@
         <a class="stack-exchange-badge" href="https://stackexchange.com/users/1408780">
             <img src="https://stackexchange.com/users/flair/1408780.png" width="208" height="58" alt="Profile for gpicchiarelli on Stack Exchange" title="Profile for gpicchiarelli on Stack Exchange">
         </a>
-        <p class="prompt">~/gpicchiarelli$</p>
+        <p class="prompt">Terminal ready. Enter command:</p>
     </div>
 </body>
 </html>
