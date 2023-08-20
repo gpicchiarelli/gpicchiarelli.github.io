@@ -13,22 +13,24 @@
             font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
+        }
+
+        .terminal {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             height: 100vh;
+            padding: 2rem;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        .prompt {
+            color: #0ff;
+            margin-right: 0.5rem;
+        }
+
+        .output {
             color: #0f0;
-        }
-
-        pre {
-            font-style: italic;
-            color: #666;
         }
 
         ul {
@@ -52,22 +54,35 @@
     </style>
 </head>
 <body>
-    <h1>~/gpicchiarelli</h1>
-    <pre>-- I don't like the idea that I'm not in control of my life.</pre>
-    <ul>
-        <li><a href="https://github.com/gpicchiarelli">GitHub</a></li>
-        <li><a href="https://gitlab.com/gpicchiarelli">GitLab</a></li>
-        <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share">Amazon Wishlist</a></li>
-        <li><a href="https://www.facebook.com/aethon.shaan.3">Facebook</a></li>
-        <li><a href="https://www.instagram.com/gpicchiarelli">Instagram</a></li>
-        <li><a href="https://www.youtube.com/user/swordlothar">YouTube</a></li>
-        <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli">Jamendo</a></li>
-        <li><a href="mailto:gpicchiarelli@gmail.com">Mail</a></li>
-    </ul>
-    <a href="https://stackexchange.com/users/1408780">
-        <img src="https://stackexchange.com/users/flair/1408780.png" width="208" height="58"
-             alt="profile for gpicchiarelli on Stack Exchange, a network of free, community-driven Q&A sites"
-             title="profile for gpicchiarelli on Stack Exchange, a network of free, community-driven Q&A sites">
-    </a>
+    <div class="terminal">
+        <pre>
+   ____             _           ____                     _           
+  / ___|  ___   ___| | _____   |  _ \  __ _ _ __ ___   __ _| | ___  ___ 
+  \___ \ / _ \ / __| |/ / _ \  | | | |/ _` | '_ ` _ \ / _` | |/ _ \/ __|
+   ___) | (_) | (__|   <  __/  | |_| | (_| | | | | | | (_| | |  __/\__ \
+  |____/ \___/ \___|_|\_\___|  |____/ \__,_|_| |_| |_|\__,_|_|\___||___/
+                                                                        
+        </pre>
+        <p class="prompt">~/gpicchiarelli$</p>
+        <p class="output">man gpicchiarelli</p>
+        <p class="output">Software Engineer, Tech Enthusiast</p>
+        <p class="prompt">~/gpicchiarelli$</p>
+        <ul>
+            <li><a href="https://github.com/gpicchiarelli">GitHub</a></li>
+            <li><a href="https://gitlab.com/gpicchiarelli">GitLab</a></li>
+            <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share">Amazon Wishlist</a></li>
+            <li><a href="https://www.facebook.com/aethon.shaan.3">Facebook</a></li>
+            <li><a href="https://www.instagram.com/gpicchiarelli">Instagram</a></li>
+            <li><a href="https://www.youtube.com/user/swordlothar">YouTube</a></li>
+            <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli">Jamendo</a></li>
+            <li><a href="mailto:gpicchiarelli@gmail.com">Mail</a></li>
+        </ul>
+        <a href="https://stackexchange.com/users/1408780">
+            <img src="https://stackexchange.com/users/flair/1408780.png" width="208" height="58"
+                alt="profile for gpicchiarelli on Stack Exchange, a network of free, community-driven Q&A sites"
+                title="profile for gpicchiarelli on Stack Exchange, a network of free, community-driven Q&A sites">
+        </a>
+        <p class="prompt">~/gpicchiarelli$</p>
+    </div>
 </body>
 </html>
