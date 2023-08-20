@@ -1,2 +1,2 @@
 # gpicchiarelli.github.io
-Personal page
+Personal page 2.0
