@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gpicchiarelli - Cyber</title>
+    <title>gpicchiarelli - Telecom Geek</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
@@ -64,6 +66,25 @@
         .stack-exchange-badge {
             margin-top: 40px;
         }
+
+        .formula {
+            margin-bottom: 30px;
+        }
+
+        .formula h2 {
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+
+        .formula p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -84,6 +105,21 @@
             <a href="https://stackexchange.com/users/1408780">
                 <img src="https://stackexchange.com/users/flair/1408780.png" width="208" height="58" alt="Profile for gpicchiarelli on Stack Exchange" title="Profile for gpicchiarelli on Stack Exchange">
             </a>
+        </div>
+        <div class="formula">
+            <h2>Formula di Shannon per il Canale di Rumore</h2>
+            <p>La capacità \( C \) di un canale con larghezza di banda \( W \) e potenza di rumore \( N \) è data da:</p>
+            <p>\[ C = W \cdot \log_2\left(1 + \frac{S}{N}\right) \]</p>
+        </div>
+        <div class="formula">
+            <h2>Equazione del Telegrafo</h2>
+            <p>L'equazione del telegrafo per una linea di trasmissione è:</p>
+            <p>\[ V(z) = V^+ e^{-\gamma z} + V^- e^{\gamma z} \]</p>
+        </div>
+        <div class="formula">
+            <h2>Legge di Beer-Lambert per l'Assorbimento Ottico</h2>
+            <p>La legge di Beer-Lambert descrive l'assorbimento ottico in un materiale in funzione dello spessore \( x \):</p>
+            <p>\[ I(x) = I_0 \cdot e^{-\alpha x} \]</p>
         </div>
     </div>
 </body>
