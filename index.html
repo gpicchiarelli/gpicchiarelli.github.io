@@ -4,35 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>~gpicchiarelli</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
+            font-family: 'Fira Code', monospace;
+            background-color: #0d0d0d;
+            color: #33ff33;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
         }
 
         .container {
-            background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+            background: #1a1a1a;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 10px 10px 20px #0a0a0a, -10px -10px 20px #2e2e2e;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
             max-width: 800px;
             text-align: center;
+            border: 1px solid #33ff33;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 1px,
+                rgba(0, 255, 0, 0.1) 1px,
+                rgba(0, 255, 0, 0.1) 2px
+            );
+            animation: scan 5s linear infinite;
+        }
+
+        @keyframes scan {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
         }
 
         .header {
             font-size: 52px;
-            font-weight: 800;
-            color: #76ff03;
+            font-weight: 700;
+            color: #33ff33;
             margin-bottom: 12px;
+            text-shadow: 0 0 10px #33ff33;
         }
 
         .quote {
@@ -51,20 +83,21 @@
         }
 
         .links a {
-            color: #64b5f6;
+            color: #33ff33;
             text-decoration: none;
             font-size: 22px;
-            transition: transform 0.3s, color 0.3s;
+            transition: color 0.3s, text-shadow 0.3s;
         }
 
         .links a:hover {
             color: #ff4081;
-            transform: translateY(-3px);
+            text-shadow: 0 0 5px #ff4081;
         }
 
         .stack-exchange-badge img {
             margin-top: 40px;
             border-radius: 6px;
+            border: 1px solid #33ff33;
         }
 
         .footer {
@@ -72,7 +105,6 @@
             font-size: 16px;
             color: #757575;
         }
-
     </style>
 </head>
 <body>
