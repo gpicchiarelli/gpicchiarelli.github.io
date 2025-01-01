@@ -6,70 +6,40 @@
     <title>~gpicchiarelli</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+        /* Importa il font San Francisco utilizzato da Apple */
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap');
 
         body {
-            font-family: 'Fira Code', monospace;
-            background-color: #0d0d0d;
-            color: #33ff33;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #F5F5F7;
+            color: #1D1D1F;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
         }
 
         .container {
-            background: #1a1a1a;
+            background-color: #FFFFFF;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             text-align: center;
-            border: 1px solid #33ff33;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 1px,
-                rgba(0, 255, 0, 0.1) 1px,
-                rgba(0, 255, 0, 0.1) 2px
-            );
-            animation: scan 5s linear infinite;
-        }
-
-        @keyframes scan {
-            0% {
-                transform: translateY(100%);
-            }
-            100% {
-                transform: translateY(-100%);
-            }
         }
 
         .header {
-            font-size: 52px;
-            font-weight: 700;
-            color: #33ff33;
-            margin-bottom: 12px;
-            text-shadow: 0 0 10px #33ff33;
+            font-size: 48px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 16px;
         }
 
         .quote {
             font-style: italic;
-            color: #ffcc00;
+            color: #6E6E73;
             margin-bottom: 32px;
         }
 
@@ -79,31 +49,30 @@
             margin: 40px 0;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 12px;
         }
 
         .links a {
-            color: #33ff33;
+            color: #0071E3;
             text-decoration: none;
-            font-size: 22px;
-            transition: color 0.3s, text-shadow 0.3s;
+            font-size: 20px;
+            transition: color 0.3s;
         }
 
         .links a:hover {
-            color: #ff4081;
-            text-shadow: 0 0 5px #ff4081;
+            color: #005BB5;
         }
 
         .stack-exchange-badge img {
             margin-top: 40px;
-            border-radius: 6px;
-            border: 1px solid #33ff33;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .footer {
             margin-top: 50px;
-            font-size: 16px;
-            color: #757575;
+            font-size: 14px;
+            color: #6E6E73;
         }
     </style>
 </head>
@@ -133,6 +102,7 @@
     </div>
 
     <script>
+        // Imposta l'anno corrente nel footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
