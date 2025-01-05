@@ -5,83 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>~gpicchiarelli</title>
     <link rel="shortcut icon" href="favicon.ico"/>
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Font elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Background a flusso continuo con sfondo dinamico */
-        @keyframes backgroundFlow {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
-
         /* Corpo pagina */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'SF Pro Display', sans-serif;
-            background: #000;
-            color: #0f0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            position: relative;
-            background: radial-gradient(circle at 50%, rgba(0, 255, 0, 0.2), rgba(0, 0, 0, 0.9));
         }
 
-        /* Animazione particellare per il background */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://source.unsplash.com/random');
-            background-size: cover;
-            background-repeat: no-repeat;
-            animation: backgroundFlow 30s linear infinite;
-            filter: blur(8px);
-            z-index: -1;
-        }
-
-        /* Container principale */
+        /* Contenitore principale */
         .container {
-            display: flex;
-            justify-content: space-between;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             width: 80%;
             max-width: 1200px;
-            padding: 40px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 16px;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+            padding: 50px;
+            text-align: center;
             position: relative;
-            z-index: 2;
         }
 
-        /* Sezione testo */
-        .text-content {
-            width: 60%;
-            text-align: left;
-        }
-
+        /* Testo principale */
         .header {
-            font-size: 64px;
-            font-weight: bold;
-            color: #0f0;
-            text-shadow: 0 0 15px #0f0, 0 0 25px #0f0, 0 0 35px #0f0;
-            animation: pulseText 1s infinite alternate;
+            font-size: 60px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        /* Citazione con effetto futuristico */
+        /* Citazione stilosa */
         .quote {
             font-size: 22px;
             font-style: italic;
-            color: #b3ffcc;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            animation: pulseText 3s infinite alternate;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 300;
         }
 
         /* Links */
@@ -90,101 +58,82 @@
             padding: 0;
             margin: 0;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
         }
 
         .links a {
-            color: #0f0;
-            font-size: 22px;
+            color: #007bff;
+            font-size: 20px;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s, transform 0.3s;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 1px;
         }
 
         .links a:hover {
-            color: #00ff00;
-            transform: scale(1.1);
-            text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
+            color: #0056b3;
+            transform: translateY(-5px);
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
-        /* Animazione del testo */
-        @keyframes pulseText {
-            0% { transform: scale(1); color: #0f0; }
-            100% { transform: scale(1.1); color: #b3ffcc; }
-        }
-
-        /* Sezione foto di Flickr */
-        .image-container {
-            width: 320px;
-            height: 320px;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
-            position: relative;
-        }
-
-        .flickr-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .image-container:hover .flickr-photo {
-            transform: scale(1.1);
-        }
-
-        /* Footer */
+        /* Separazione footer */
         .footer {
             position: absolute;
             bottom: 20px;
-            left: 20px;
+            width: 100%;
+            text-align: center;
             font-size: 14px;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
-            z-index: 2;
+            color: #aaa;
         }
 
         .footer a {
-            color: #0f0;
+            color: #007bff;
             text-decoration: none;
-            margin-right: 12px;
-            font-size: 18px;
+            margin-left: 10px;
+            transition: color 0.3s;
         }
 
         .footer a:hover {
-            color: #00FF00;
-            text-shadow: 0 0 10px #00ff00;
+            color: #0056b3;
+        }
+
+        /* Animazione di ingresso */
+        .container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
     <div class="container">
-        <div class="text-content">
-            <h1 class="header">~gpicchiarelli</h1>
-            <p class="quote">"Root access granted. Proceed with caution."</p>
-            <ul class="links">
-                <li><a href="https://www.flickr.com/photos/66920399@N07/" aria-label="Flickr Profile"><i class="fab fa-flickr"></i> Flickr</a></li>
-                <li><a href="https://github.com/gpicchiarelli" aria-label="GitHub Profile"><i class="fab fa-github"></i> GitHub</a></li>
-                <li><a href="https://gitlab.com/gpicchiarelli" aria-label="GitLab Profile"><i class="fab fa-gitlab"></i> GitLab</a></li>
-                <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share" aria-label="Amazon Wishlist"><i class="fab fa-amazon"></i> Amazon Wishlist</a></li>
-                <li><a href="https://www.facebook.com/aethon.shaan.3" aria-label="Facebook Profile"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="https://www.instagram.com/gpicchiarelli" aria-label="Instagram Profile"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="https://www.youtube.com/user/swordlothar" aria-label="YouTube Channel"><i class="fab fa-youtube"></i> YouTube</a></li>
-                <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli" aria-label="Jamendo Profile"><i class="fas fa-music"></i> Jamendo</a></li>
-                <li><a href="mailto:gpicchiarelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a></li>
-            </ul>
+        <h1 class="header">~gpicchiarelli</h1>
+        <p class="quote">"Root access granted. Proceed with caution."</p>
+        <ul class="links">
+            <li><a href="https://www.flickr.com/photos/66920399@N07/" aria-label="Flickr Profile">Flickr</a></li>
+            <li><a href="https://github.com/gpicchiarelli" aria-label="GitHub Profile">GitHub</a></li>
+            <li><a href="https://gitlab.com/gpicchiarelli" aria-label="GitLab Profile">GitLab</a></li>
+            <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share" aria-label="Amazon Wishlist">Amazon Wishlist</a></li>
+            <li><a href="https://www.facebook.com/aethon.shaan.3" aria-label="Facebook Profile">Facebook</a></li>
+            <li><a href="https://www.instagram.com/gpicchiarelli" aria-label="Instagram Profile">Instagram</a></li>
+            <li><a href="https://www.youtube.com/user/swordlothar" aria-label="YouTube Channel">YouTube</a></li>
+            <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli" aria-label="Jamendo Profile">Jamendo</a></li>
+            <li><a href="mailto:gpicchiarelli@gmail.com" aria-label="Email">Email</a></li>
+        </ul>
+        <div class="footer">
+            &copy; <span id="year"></span> - All Rights Reserved
+            <a href="https://stackexchange.com/users/1408780" aria-label="StackExchange Profile">Stack Exchange</a>
         </div>
-        <div class="image-container">
-            <img src="https://www.flickr.com/photos/66920399@N07/53994830884/in/dateposted-friend/" alt="Flickr Photo" class="flickr-photo">
-        </div>
-    </div>
-    <div class="footer">
-        &copy; <span id="year"></span> - All Rights Reserved
-        <a href="https://stackexchange.com/users/1408780">Stack Exchange</a>
     </div>
 
     <script>
