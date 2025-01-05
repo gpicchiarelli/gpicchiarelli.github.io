@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>~gpicchiarelli</title>
     <link rel="shortcut icon" href="favicon.ico"/>
-    <!-- Importa il font San Francisco utilizzato da Apple -->
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Importa FontAwesome per le icone social -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Effetto Matrix per il testo */
-        @keyframes matrixText {
-            0% { color: #0f0; text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0; }
-            100% { color: transparent; text-shadow: none; }
+        /* Background a flusso continuo con sfondo dinamico */
+        @keyframes backgroundFlow {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
         }
 
         /* Corpo pagina */
@@ -21,45 +20,68 @@
             margin: 0;
             padding: 0;
             font-family: 'SF Pro Display', sans-serif;
-            background-color: #000;
+            background: #000;
             color: #0f0;
-            overflow: hidden;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        /* Contenitore principale */
-        .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 90%;
-            max-width: 1200px;
+            overflow: hidden;
             position: relative;
+            background: radial-gradient(circle at 50%, rgba(0, 255, 0, 0.2), rgba(0, 0, 0, 0.9));
         }
 
-        /* Testo principale */
+        /* Animazione particellare per il background */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://source.unsplash.com/random');
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: backgroundFlow 30s linear infinite;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        /* Container principale */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 16px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Sezione testo */
+        .text-content {
+            width: 60%;
+            text-align: left;
+        }
+
         .header {
-            font-size: 48px;
-            font-weight: 600;
+            font-size: 64px;
+            font-weight: bold;
             color: #0f0;
-            animation: matrixText 5s infinite alternate;
+            text-shadow: 0 0 15px #0f0, 0 0 25px #0f0, 0 0 35px #0f0;
+            animation: pulseText 1s infinite alternate;
         }
 
-        /* Citazione */
+        /* Citazione con effetto futuristico */
         .quote {
-            font-size: 20px;
+            font-size: 22px;
             font-style: italic;
-            color: #0f0;
-            margin-bottom: 40px;
-            animation: matrixText 4s infinite alternate;
+            color: #b3ffcc;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            animation: pulseText 3s infinite alternate;
         }
 
         /* Links */
@@ -69,36 +91,49 @@
             margin: 0;
             display: flex;
             flex-direction: column;
+            gap: 15px;
         }
 
         .links a {
             color: #0f0;
+            font-size: 22px;
             text-decoration: none;
-            font-size: 18px;
-            margin-bottom: 12px;
-            transition: color 0.3s;
-            font-family: monospace;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
         }
 
         .links a:hover {
-            color: #00FF00;
-            text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+            color: #00ff00;
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
         }
 
+        /* Animazione del testo */
+        @keyframes pulseText {
+            0% { transform: scale(1); color: #0f0; }
+            100% { transform: scale(1.1); color: #b3ffcc; }
+        }
+
+        /* Sezione foto di Flickr */
         .image-container {
-            width: 250px;
-            height: 250px;
+            width: 320px;
+            height: 320px;
             overflow: hidden;
             border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
             position: relative;
-            background-color: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
         }
 
         .flickr-photo {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .image-container:hover .flickr-photo {
+            transform: scale(1.1);
         }
 
         /* Footer */
@@ -106,10 +141,10 @@
             position: absolute;
             bottom: 20px;
             left: 20px;
-            color: #0f0;
             font-size: 14px;
-            font-family: monospace;
-            animation: matrixText 6s infinite alternate;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            z-index: 2;
         }
 
         .footer a {
@@ -121,30 +156,14 @@
 
         .footer a:hover {
             color: #00FF00;
-        }
-
-        /* Animazione di scrolling per il background Matrix */
-        .matrix-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://code.jquery.com/jquery-3.6.0.min.js') repeat;
-            z-index: -1;
-            animation: matrixScroll 10s linear infinite;
-        }
-
-        @keyframes matrixScroll {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
+            text-shadow: 0 0 10px #00ff00;
         }
     </style>
 </head>
 <body>
-    <div class="matrix-background"></div>
+    <div class="background"></div>
     <div class="container">
-        <div class="content">
+        <div class="text-content">
             <h1 class="header">~gpicchiarelli</h1>
             <p class="quote">"Root access granted. Proceed with caution."</p>
             <ul class="links">
@@ -157,8 +176,6 @@
                 <li><a href="https://www.youtube.com/user/swordlothar" aria-label="YouTube Channel"><i class="fab fa-youtube"></i> YouTube</a></li>
                 <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli" aria-label="Jamendo Profile"><i class="fas fa-music"></i> Jamendo</a></li>
                 <li><a href="mailto:gpicchiarelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a></li>
-                <li><a href="https://stackexchange.com/users/1408780">Stack Exchange</a></li>
-
             </ul>
         </div>
         <div class="image-container">
@@ -167,6 +184,7 @@
     </div>
     <div class="footer">
         &copy; <span id="year"></span> - All Rights Reserved
+        <a href="https://stackexchange.com/users/1408780">Stack Exchange</a>
     </div>
 
     <script>
