@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <!-- Font elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Corpo pagina */
         body {
@@ -65,9 +67,10 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            text-align: left;
         }
 
         .links a {
@@ -78,12 +81,19 @@
             transition: color 0.3s, transform 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
         }
 
         .links a:hover {
             color: #009900;
             transform: translateY(-5px);
             text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+        }
+
+        .links i {
+            margin-right: 15px;
+            font-size: 22px;
         }
 
         /* Separazione footer */
@@ -154,16 +164,16 @@
         <h1 class="header terminal-effect">~gpicchiarelli</h1>
         <p class="quote">"Root access granted. Proceed with caution."</p>
         <ul class="links">
-            <li><a href="https://www.flickr.com/photos/66920399@N07/" aria-label="Flickr Profile">Flickr</a></li>
-            <li><a href="https://github.com/gpicchiarelli" aria-label="GitHub Profile">GitHub</a></li>
-            <li><a href="https://gitlab.com/gpicchiarelli" aria-label="GitLab Profile">GitLab</a></li>
-            <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share" aria-label="Amazon Wishlist">Amazon Wishlist</a></li>
-            <li><a href="https://www.facebook.com/aethon.shaan.3" aria-label="Facebook Profile">Facebook</a></li>
-            <li><a href="https://www.instagram.com/gpicchiarelli" aria-label="Instagram Profile">Instagram</a></li>
-            <li><a href="https://www.youtube.com/user/swordlothar" aria-label="YouTube Channel">YouTube</a></li>
-            <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli" aria-label="Jamendo Profile">Jamendo</a></li>
-            <li><a href="mailto:gpicchiarelli@gmail.com" aria-label="Email">Email</a></li>
-            <li><a href="https://stackexchange.com/users/1408780" aria-label="StackExchange Profile">Stack Exchange<img src="https://stackexchange.com/users/flair/1408780.png" alt="Stack Exchange Badge" class="stack-badge"></a></li>
+            <li><a href="https://www.flickr.com/photos/66920399@N07/" aria-label="Flickr Profile"><i class="fab fa-flickr"></i>Flickr</a></li>
+            <li><a href="https://github.com/gpicchiarelli" aria-label="GitHub Profile"><i class="fab fa-github"></i>GitHub</a></li>
+            <li><a href="https://gitlab.com/gpicchiarelli" aria-label="GitLab Profile"><i class="fab fa-gitlab"></i>GitLab</a></li>
+            <li><a href="https://www.amazon.it/hz/wishlist/ls/K6BK906KT7IN?ref_=wl_share" aria-label="Amazon Wishlist"><i class="fab fa-amazon"></i>Amazon Wishlist</a></li>
+            <li><a href="https://www.facebook.com/aethon.shaan.3" aria-label="Facebook Profile"><i class="fab fa-facebook"></i>Facebook</a></li>
+            <li><a href="https://www.instagram.com/gpicchiarelli" aria-label="Instagram Profile"><i class="fab fa-instagram"></i>Instagram</a></li>
+            <li><a href="https://www.youtube.com/user/swordlothar" aria-label="YouTube Channel"><i class="fab fa-youtube"></i>YouTube</a></li>
+            <li><a href="https://www.jamendo.com/user/3087416/gpicchiarelli" aria-label="Jamendo Profile"><i class="fab fa-soundcloud"></i>Jamendo</a></li>
+            <li><a href="mailto:gpicchiarelli@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i>Email</a></li>
+            <li><a href="https://stackexchange.com/users/1408780" aria-label="StackExchange Profile"><i class="fab fa-stack-overflow"></i>Stack Exchange<img src="https://stackexchange.com/users/flair/1408780.png" alt="Stack Exchange Badge" class="stack-badge"></a></li>
         </ul>
         <div class="footer">
             &copy; <span id="year"></span> - All Rights Reserved
