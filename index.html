@@ -6,17 +6,15 @@
     <title>~gpicchiarelli</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <!-- Font elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Font Awesome per le icone -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=San+Francisco:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Corpo pagina */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #1e1e1e; /* Grigio scuro GitHub */
-            color: #f4f4f4; /* Testo chiaro */
+            font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: #f8f8f7; /* Colore chiaro tipico Apple */
+            color: #333; /* Testo scuro per contrasto */
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -25,9 +23,9 @@
 
         /* Contenitore principale */
         .container {
-            background-color: #f4f4f4; /* Bianco Apple */
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            background-color: #ffffff; /* Bianco per contrastare il fondo */
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 1000px;
             padding: 40px;
@@ -37,25 +35,24 @@
         }
 
         .container:hover {
-            box-shadow: 0 40px 120px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
         }
 
         /* Testo principale */
         .header {
             font-size: 50px;
             font-weight: 500;
-            color: #2d2d2d; /* Grigio scuro per titolo */
+            color: #1c1c1e; /* Grigio scuro per il titolo */
             margin-bottom: 30px;
-            letter-spacing: 3px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7); /* Tocco verde GitHub */
         }
 
         /* Citazione stilosa */
         .quote {
             font-size: 20px;
             font-style: italic;
-            color: #8f8f8f; /* Grigio chiaro per citazione */
+            color: #8e8e93; /* Colore grigio chiaro per citazione */
             margin-bottom: 40px;
             font-weight: 300;
         }
@@ -67,22 +64,14 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centrato orizzontalmente */
+            align-items: center;
             gap: 20px;
             text-align: left;
             width: 100%; /* Larghezza piena */
         }
 
-        /* Centra l'elenco al centro della pagina */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
         .links a {
-            color: #2e7d32; /* Verde tipico di GitHub */
+            color: #007aff; /* Blu Apple */
             font-size: 18px;
             text-decoration: none;
             font-weight: 500;
@@ -94,9 +83,9 @@
         }
 
         .links a:hover {
-            color: #388e3c; /* Verde più scuro per hover */
+            color: #0051a8; /* Blu più scuro per hover */
             transform: translateY(-5px);
-            text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+            text-shadow: 0 0 8px rgba(0, 122, 255, 0.7);
         }
 
         .links i {
@@ -111,18 +100,18 @@
             width: 100%;
             text-align: center;
             font-size: 14px;
-            color: #aaa;
+            color: #8e8e93;
         }
 
         .footer a {
-            color: #00ff00; /* Verde per il link del footer */
+            color: #007aff; /* Blu per il link del footer */
             text-decoration: none;
             margin-left: 10px;
             transition: color 0.3s;
         }
 
         .footer a:hover {
-            color: #009900;
+            color: #0051a8;
         }
 
         /* Animazione di ingresso */
@@ -151,7 +140,7 @@
         /* Effetto terminale */
         .terminal-effect {
             font-family: 'Courier New', monospace;
-            color: #00ff00;
+            color: #007aff;
             letter-spacing: 2px;
             font-size: 18px;
             animation: typing 4s steps(30) 1s forwards;
