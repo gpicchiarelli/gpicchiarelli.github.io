@@ -6,48 +6,55 @@
     <title>~gpicchiarelli</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <!-- Font elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Corpo pagina */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #d1d1d1;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         /* Contenitore principale */
         .container {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 1200px;
-            padding: 50px;
+            background-color: #2c2c2c;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 1000px;
+            padding: 40px;
             text-align: center;
             position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 40px 120px rgba(0, 0, 0, 0.4);
         }
 
         /* Testo principale */
         .header {
-            font-size: 60px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+            font-size: 50px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.7);
         }
 
         /* Citazione stilosa */
         .quote {
-            font-size: 22px;
+            font-size: 20px;
             font-style: italic;
-            color: #555;
+            color: #8f8f8f;
             margin-bottom: 40px;
             font-weight: 300;
         }
@@ -60,27 +67,29 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
         }
 
         .links a {
-            color: #007bff;
-            font-size: 20px;
+            color: #00ff00;
+            font-size: 18px;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s, transform 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .links a:hover {
-            color: #0056b3;
+            color: #009900;
             transform: translateY(-5px);
-            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
         }
 
         /* Separazione footer */
         .footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 10px;
             width: 100%;
             text-align: center;
             font-size: 14px;
@@ -88,14 +97,14 @@
         }
 
         .footer a {
-            color: #007bff;
+            color: #00ff00;
             text-decoration: none;
             margin-left: 10px;
             transition: color 0.3s;
         }
 
         .footer a:hover {
-            color: #0056b3;
+            color: #009900;
         }
 
         /* Animazione di ingresso */
@@ -120,11 +129,29 @@
             margin-left: 10px;
             margin-top: 10px;
         }
+
+        /* Effetto terminale */
+        .terminal-effect {
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            letter-spacing: 2px;
+            font-size: 18px;
+            animation: typing 4s steps(30) 1s forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="header">~gpicchiarelli</h1>
+        <h1 class="header terminal-effect">~gpicchiarelli</h1>
         <p class="quote">"Root access granted. Proceed with caution."</p>
         <ul class="links">
             <li><a href="https://www.flickr.com/photos/66920399@N07/" aria-label="Flickr Profile">Flickr</a></li>
