@@ -32,7 +32,6 @@
             padding: 40px;
             text-align: center;
             position: relative;
-            transition: all 0.3s ease;
         }
 
         .container:hover {
@@ -76,7 +75,6 @@
             font-size: 18px;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s, transform 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
             display: flex;
@@ -114,52 +112,11 @@
         .footer a:hover {
             color: #0051a8;
         }
-
-        /* Animazione di ingresso */
-        .container {
-            animation: fadeIn 1s ease-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Badge Stack Overflow */
-        .stack-badge {
-            display: inline-block;
-            margin-left: 10px;
-            margin-top: 10px;
-        }
-
-        /* Effetto terminale */
-        .terminal-effect {
-            font-family: 'Courier New', monospace;
-            color: #007aff;
-            letter-spacing: 2px;
-            font-size: 18px;
-            animation: typing 4s steps(30) 1s forwards;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="header terminal-effect">~gpicchiarelli</h1>
+        <h1 class="header">~gpicchiarelli</h1>
         <p class="quote">"Root access granted. Proceed with caution."</p>
         <ul class="links">
             <li><a href="https://www.flickr.com/photos/66920399@N07/" aria-label="Flickr Profile"><i class="fab fa-flickr"></i>Flickr</a></li>
